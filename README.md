@@ -1,4 +1,4 @@
-P3AM Inventory: Smart Stock & Control System
+ISSC System : Inventory Smart Stock & Control System
 [Deskripsi]
 
 Pembaik 3 AM
