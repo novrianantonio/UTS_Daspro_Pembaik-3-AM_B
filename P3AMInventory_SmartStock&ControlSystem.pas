@@ -3,5 +3,5 @@ uses crt;
 
 begin
     writeln('Halo ges');
-    writeln('tes');
+    writeln('tes tes aja dulu');
 end.
