@@ -1,5 +1,5 @@
 ISSC System : Inventory Smart Stock & Control System
-[Deskripsi]
+ISSC System adalah aplikasi berbasis konsol (command-line) yang dikembanghkan menggunakan bahasa pascal. Program ini dirancang untuk memudahkan proses pengelolaan, pemantauan, dan pengontrolan inventaris barang secara efisien dan terstruktur. Program ini membantu pengguna dalam memantau ketersediaan stok dan pembaruan data secara praktis.
 
 Pembaik 3 AM
 - Suryani, 261401004, Kom B, Lab DP3
