@@ -69,7 +69,7 @@ begin
                 writeln('=--------------------------------------------=');
                 for i:=1 to high(namaBarang) do
                 begin
-                    writeln('= ', i:5, '.   ', namaBarang[i], jumlahBarang[i]:33);
+                    writeln('= ', i:5, '.   ', namaBarang[i], jumlahBarang[i]0:33);
                 end;
                 writeln('==============================================');
             end;
