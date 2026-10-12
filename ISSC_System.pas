@@ -24,7 +24,8 @@ begin
         writeln('==============================================');
         writeln;
         writeln('1. Cek Stok Barang');
-        writeln('2. Manage Stok barang');
+        writeln('2. Manage Stok Barang');
+        writeln('3. Manage Barang');
         writeln('0. Keluar');
         write('Pilih opsi : ');
         readln(opsiA);

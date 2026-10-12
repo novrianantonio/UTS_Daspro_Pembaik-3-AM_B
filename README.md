@@ -7,3 +7,6 @@ Pembaik 3 AM
 - Ammar Yazid, 261401067, Kom B, Lab DP3
 
 [Fitur-fitur]
+1. Cek stok ketersediaan barang
+2. Menambah atau mengurangi stok
+3. menambah atau mengurangi barang
