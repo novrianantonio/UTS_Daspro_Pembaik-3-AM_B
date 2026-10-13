@@ -86,7 +86,7 @@ begin
                 writeln('==============================================');
             end;
         end
-        else if opsiA = 2 then //fitur 2. manage stok barang
+        else if opsiA = 2 then //fitur 2. manage barang
         begin
             clrscr;
             writeln('==============================================');
