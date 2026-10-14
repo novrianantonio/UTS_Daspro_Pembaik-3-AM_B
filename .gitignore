@@ -4,6 +4,7 @@
 *.ppu
 *.bak
 *~
+*.dir
 
 # Abaikan folder cache/backup bawaan IDE (jika pakai Lazarus/Free Pascal)
 backup/
