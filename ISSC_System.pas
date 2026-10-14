@@ -176,6 +176,157 @@ begin
                 writeln;
                 writeln('OPSI TIDAK VALID!');
             end;
+        end
+        else if opsiA = 3 then //fitur 3. manage stok barang
+        begin
+            if length(namaBarang) = 0 then
+            begin
+                clrscr;
+                writeln('==============================================');
+                writeln('==== |||||     |||||      |||||     ||||| ====');
+                writeln('====  |||     |||        |||       |||    ====');
+                writeln('====  |||      |||        |||      |||    ====');
+                writeln('====  |||       |||        |||     |||    ====');
+                writeln('====  |||        |||        |||    |||    ====');
+                writeln('==== |||||    |||||      |||||      ||||| ====');
+                writeln('==============================================');
+                writeln('======    S    Y    S    T    E    M    ======');
+                writeln('==============================================');
+                writeln('=== Inventory Smart Stock & Control System ===');
+                writeln('==============================================');
+                writeln;
+                writeln('Barang belum ada! Silahkan perbarui stok barang!');
+            end
+            else
+            begin
+                clrscr;
+                writeln('==============================================');
+                writeln('==== |||||     |||||      |||||     ||||| ====');
+                writeln('====  |||     |||        |||       |||    ====');
+                writeln('====  |||      |||        |||      |||    ====');
+                writeln('====  |||       |||        |||     |||    ====');
+                writeln('====  |||        |||        |||    |||    ====');
+                writeln('==== |||||    |||||      |||||      ||||| ====');
+                writeln('==============================================');
+                writeln('======    S    Y    S    T    E    M    ======');
+                writeln('==============================================');
+                writeln('=== Inventory Smart Stock & Control System ===');
+                writeln('==============================================');
+                writeln;
+                writeln('==============================================');
+                writeln('= No. | Nama Barang            | jumlah Stok =');
+                writeln('=--------------------------------------------=');
+                for i:=1 to high(namaBarang) do
+                begin
+                    write('= ', i, '.');
+                    write('  | ', namaBarang[i]);
+                    for j:=1 to (22-length(namaBarang[i])) do 
+                    begin
+                        write(' ');
+                    end;
+                    writeln(' | ', jumlahBarang[i]:11, ' =');
+                end;
+                writeln('==============================================');
+                writeln;
+                writeln('1. Tambah Stok Barang');
+                writeln('2. Kurangi Stok Barang');
+                write('Pilih Opsi : ');
+                readln(opsiB);
+                if opsiB = 1 then // fitur 3.1 tambah stok barang
+                begin
+                    clrscr;
+                    writeln('==============================================');
+                    writeln('==== |||||     |||||      |||||     ||||| ====');
+                    writeln('====  |||     |||        |||       |||    ====');
+                    writeln('====  |||      |||        |||      |||    ====');
+                    writeln('====  |||       |||        |||     |||    ====');
+                    writeln('====  |||        |||        |||    |||    ====');
+                    writeln('==== |||||    |||||      |||||      ||||| ====');
+                    writeln('==============================================');
+                    writeln('======    S    Y    S    T    E    M    ======');
+                    writeln('==============================================');
+                    writeln('=== Inventory Smart Stock & Control System ===');
+                    writeln('==============================================');
+                    writeln;
+                    writeln('==============================================');
+                    writeln('= No. | Nama Barang            | jumlah Stok =');
+                    writeln('=--------------------------------------------=');
+                    for i:=1 to high(namaBarang) do
+                    begin
+                        write('= ', i, '.');
+                        write('  | ', namaBarang[i]);
+                        for j:=1 to (22-length(namaBarang[i])) do 
+                        begin
+                            write(' ');
+                        end;
+                        writeln(' | ', jumlahBarang[i]:11, ' =');
+                    end;
+                    writeln('==============================================');
+                    writeln;
+                    write('masukkan nomor barang yang stoknya ingin ditambah : ');
+                    readln(i);
+                    write('masukkan jumlah stok yang ingin ditambah : ');
+                    readln(j);
+                    jumlahBarang[i] := jumlahBarang[i] + j;
+                    writeln('Stok barang "', namaBarang[i], '" berhasil ditambah sebanyak ', j, ' menjadi ', jumlahBarang[i]);
+                end
+                else if opsiB = 2 then // fitur 3.2 kurangi stok barang
+                begin
+                    clrscr;
+                    writeln('==============================================');
+                    writeln('==== |||||     |||||      |||||     ||||| ====');
+                    writeln('====  |||     |||        |||       |||    ====');
+                    writeln('====  |||      |||        |||      |||    ====');
+                    writeln('====  |||       |||        |||     |||    ====');
+                    writeln('====  |||        |||        |||    |||    ====');
+                    writeln('==== |||||    |||||      |||||      ||||| ====');
+                    writeln('==============================================');
+                    writeln('======    S    Y    S    T    E    M    ======');
+                    writeln('==============================================');
+                    writeln('=== Inventory Smart Stock & Control System ===');
+                    writeln('==============================================');
+                    writeln;
+                    writeln('==============================================');
+                    writeln('= No. | Nama Barang            | jumlah Stok =');
+                    writeln('=--------------------------------------------=');
+                    for i:=1 to high(namaBarang) do
+                    begin
+                        write('= ', i, '.');
+                        write('  | ', namaBarang[i]);
+                        for j:=1 to (22-length(namaBarang[i])) do 
+                        begin
+                            write(' ');
+                        end;
+                        writeln(' | ', jumlahBarang[i]:11, ' =');
+                    end;
+                    writeln('==============================================');
+                    writeln;
+                    write('masukkan nomor barang yang stoknya ingin dikurangi : ');
+                    readln(i);
+                    write('masukkan jumlah stok yang ingin dikurangi : ');
+                    readln(j);
+                    jumlahBarang[i] := jumlahBarang[i] - j;
+                    writeln('Stok barang "', namaBarang[i], '" berhasil dikurangi sebanyak ', j);
+                end
+                else
+                begin
+                    clrscr;
+                    writeln('==============================================');
+                    writeln('==== |||||     |||||      |||||     ||||| ====');
+                    writeln('====  |||     |||        |||       |||    ====');
+                    writeln('====  |||      |||        |||      |||    ====');
+                    writeln('====  |||       |||        |||     |||    ====');
+                    writeln('====  |||        |||        |||    |||    ====');
+                    writeln('==== |||||    |||||      |||||      ||||| ====');
+                    writeln('==============================================');
+                    writeln('======    S    Y    S    T    E    M    ======');
+                    writeln('==============================================');
+                    writeln('=== Inventory Smart Stock & Control System ===');
+                    writeln('==============================================');
+                    writeln;
+                    writeln('OPSI TIDAK VALID!');
+                end;
+            end;   
         end;
     writeln;
     write('Apakah ingin melanjutkan aktivitas (y/n) : ');
