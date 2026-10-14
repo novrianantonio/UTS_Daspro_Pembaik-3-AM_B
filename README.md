@@ -10,4 +10,4 @@ Pembaik 3 AM
 [Fitur-fitur]
 1. Cek stok ketersediaan barang: Menampilkan informasi jumlah stok terkini dari setiap item barang yang terdaftar di dalam sistem.
 2. Menambah atau mengurangi stok: Melakukan pembaruan kuantitas suatu barang secara langsung berdasarkan transaksi masuk atau keluar (penambahan atau pengurangan jumlah unit).
-3. menambah atau mengurangi barang: Mengelola daftar inventaris secara keseluruhan dengan menambahkan jenis barang baru ke dalam sistem atau menghapus item barang yang sudah tidak lagi dicatat atau digunakan.
+3. Menambah atau mengurangi barang: Mengelola daftar inventaris secara keseluruhan dengan menambahkan jenis barang baru ke dalam sistem atau menghapus item barang yang sudah tidak lagi dicatat atau digunakan.
