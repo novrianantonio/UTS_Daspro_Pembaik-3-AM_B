@@ -13,8 +13,8 @@ var
 
 begin
     clrscr;
-    setlength(namaBarang, 0);
-    setlength(jumlahBarang, 0);
+    setlength(namaBarang, 1);
+    setlength(jumlahBarang, 1);
     setlength(header, 12);
 
     TextColor(White);
@@ -85,9 +85,9 @@ begin
                 writeln('==============================================');
                 writeln('= No. | Nama Barang            | jumlah Stok =');
                 writeln('=--------------------------------------------=');
-                for i:=0 to high(namaBarang) do
+                for i:=1 to high(namaBarang) do
                 begin
-                    write('= ', i+1, '.');
+                    write('= ', i, '.');
                     write('  | ', namaBarang[i]);
                     for j:=1 to (22-length(namaBarang[i])) do 
                     begin
@@ -193,9 +193,9 @@ begin
                     writeln('==============================================');
                     writeln('= No. | Nama Barang            | jumlah Stok =');
                     writeln('=--------------------------------------------=');
-                    for i:=0 to high(namaBarang) do
+                    for i:=1 to high(namaBarang) do
                     begin
-                        write('= ', i+1, '.');
+                        write('= ', i, '.');
                         write('  | ', namaBarang[i]);
                         for j:=1 to (22-length(namaBarang[i])) do 
                         begin
@@ -222,7 +222,7 @@ begin
                         writeln('==============================================');
                         writeln('= No. | Nama Barang            | jumlah Stok =');
                         writeln('=--------------------------------------------=');
-                        for i:=0 to high(namaBarang) do
+                        for i:=1 to high(namaBarang) do
                         begin
                             write('= ', i, '.');
                             write('  | ', namaBarang[i]);
@@ -255,9 +255,9 @@ begin
                         writeln('==============================================');
                         writeln('= No. | Nama Barang            | jumlah Stok =');
                         writeln('=--------------------------------------------=');
-                        for i:=0 to high(namaBarang) do
+                        for i:=1 to high(namaBarang) do
                         begin
-                            write('= ', i+1, '.');
+                            write('= ', i, '.');
                             write('  | ', namaBarang[i]);
                             for j:=1 to (22-length(namaBarang[i])) do 
                             begin
@@ -275,7 +275,7 @@ begin
                         jumlahBarang[i] := jumlahBarang[i] - j;
                         writeln('Stok barang "', namaBarang[i], '" berhasil dikurangi sebanyak ', j);
                     end
-                    else
+                    else 
                     begin
                         clrscr;
                         for h:=0 to 11 do
