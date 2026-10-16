@@ -3,30 +3,37 @@ uses crt;
 
 var 
     opsiA, opsiB : integer;
-    i, j : integer;
-    namaBarang : array of string;
+    h, i, j : integer;
+    namaBarang, header : array of string;
     jumlahBarang : array of integer;
     barangBaru : string;
     stokBarang : integer;
     opsiX : char;
 
 begin
-    setlength(namaBarang, 1);
-    setlength(jumlahBarang, 1);
+    setlength(namaBarang, 0);
+    setlength(jumlahBarang, 0);
+    setlength(header, 12);
+
+    header[0]:='==============================================';
+    header[1]:='==== |||||     |||||      |||||     ||||| ====';
+    header[2]:='====  |||     |||        |||       |||    ====';
+    header[3]:='====  |||      |||        |||      |||    ====';
+    header[4]:='====  |||       |||        |||     |||    ====';
+    header[5]:='====  |||        |||        |||    |||    ====';
+    header[6]:='==== |||||    |||||      |||||      ||||| ====';
+    header[7]:='==============================================';
+    header[8]:='======    S    Y    S    T    E    M    ======';
+    header[9]:='==============================================';
+    header[10]:='=== Inventory Smart Stock & Control System ===';
+    header[11]:='==============================================';
+
     repeat
         clrscr;
-        writeln('==============================================');
-        writeln('==== |||||     |||||      |||||     ||||| ====');
-        writeln('====  |||     |||        |||       |||    ====');
-        writeln('====  |||      |||        |||      |||    ====');
-        writeln('====  |||       |||        |||     |||    ====');
-        writeln('====  |||        |||        |||    |||    ====');
-        writeln('==== |||||    |||||      |||||      ||||| ====');
-        writeln('==============================================');
-        writeln('======    S    Y    S    T    E    M    ======');
-        writeln('==============================================');
-        writeln('=== Inventory Smart Stock & Control System ===');
-        writeln('==============================================');
+        for h:=0 to 11 do 
+        begin
+            writeln(header[h]);
+        end;
         writeln;
         writeln('1. Cek Stok Barang');
         writeln('2. Manage Barang');
@@ -39,43 +46,27 @@ begin
             if length(namaBarang) = 0 then
             begin
                 clrscr;
-                writeln('==============================================');
-                writeln('==== |||||     |||||      |||||     ||||| ====');
-                writeln('====  |||     |||        |||       |||    ====');
-                writeln('====  |||      |||        |||      |||    ====');
-                writeln('====  |||       |||        |||     |||    ====');
-                writeln('====  |||        |||        |||    |||    ====');
-                writeln('==== |||||    |||||      |||||      ||||| ====');
-                writeln('==============================================');
-                writeln('======    S    Y    S    T    E    M    ======');
-                writeln('==============================================');
-                writeln('=== Inventory Smart Stock & Control System ===');
-                writeln('==============================================');
+                for h:=0 to 11 do 
+                begin
+                    writeln(header[h]);
+                end;
                 writeln;
                 writeln('Barang belum ada! Silahkan perbarui stok barang!');
             end
             else
             begin
                 clrscr;
-                writeln('==============================================');
-                writeln('==== |||||     |||||      |||||     ||||| ====');
-                writeln('====  |||     |||        |||       |||    ====');
-                writeln('====  |||      |||        |||      |||    ====');
-                writeln('====  |||       |||        |||     |||    ====');
-                writeln('====  |||        |||        |||    |||    ====');
-                writeln('==== |||||    |||||      |||||      ||||| ====');
-                writeln('==============================================');
-                writeln('======    S    Y    S    T    E    M    ======');
-                writeln('==============================================');
-                writeln('=== Inventory Smart Stock & Control System ===');
-                writeln('==============================================');
+                for h:=0 to 11 do
+                begin
+                    writeln(header[h]);
+                end;
                 writeln;
                 writeln('==============================================');
                 writeln('= No. | Nama Barang            | jumlah Stok =');
                 writeln('=--------------------------------------------=');
-                for i:=1 to high(namaBarang) do
+                for i:=0 to high(namaBarang) do
                 begin
-                    write('= ', i, '.');
+                    write('= ', i+1, '.');
                     write('  | ', namaBarang[i]);
                     for j:=1 to (22-length(namaBarang[i])) do 
                     begin
@@ -89,18 +80,10 @@ begin
         else if opsiA = 2 then //fitur 2. manage barang
         begin
             clrscr;
-            writeln('==============================================');
-            writeln('==== |||||     |||||      |||||     ||||| ====');
-            writeln('====  |||     |||        |||       |||    ====');
-            writeln('====  |||      |||        |||      |||    ====');
-            writeln('====  |||       |||        |||     |||    ====');
-            writeln('====  |||        |||        |||    |||    ====');
-            writeln('==== |||||    |||||      |||||      ||||| ====');
-            writeln('==============================================');
-            writeln('======    S    Y    S    T    E    M    ======');
-            writeln('==============================================');
-            writeln('=== Inventory Smart Stock & Control System ===');
-            writeln('==============================================');
+            for h:=0 to 11 do 
+            begin
+                writeln(header[h]);
+            end;
             writeln;
             writeln('1. Tambah Barang');
             writeln('2. Hapus Barang Terakhir');
@@ -110,18 +93,10 @@ begin
             begin
                 repeat
                     clrscr;
-                    writeln('==============================================');
-                    writeln('==== |||||     |||||      |||||     ||||| ====');
-                    writeln('====  |||     |||        |||       |||    ====');
-                    writeln('====  |||      |||        |||      |||    ====');
-                    writeln('====  |||       |||        |||     |||    ====');
-                    writeln('====  |||        |||        |||    |||    ====');
-                    writeln('==== |||||    |||||      |||||      ||||| ====');
-                    writeln('==============================================');
-                    writeln('======    S    Y    S    T    E    M    ======');
-                    writeln('==============================================');
-                    writeln('=== Inventory Smart Stock & Control System ===');
-                    writeln('==============================================');
+                    for h:=0 to 11 do 
+                    begin
+                        writeln(header[h]);
+                    end;
                     writeln;
                     write('Masukkan nama barang : ');
                     readln(barangBaru);
@@ -135,24 +110,16 @@ begin
                     writeln('Barang "', barangBaru, '" berjumlah ', stokBarang, ' , berhasil di catat!');
                     write('Apakah ingin melanjutkan penambahan barang (y/n) : ');
                     readln(opsiX);
-                    lowercase(opsiX);
+                    opsiX:=lowercase(opsiX);
                 until(opsiX = 'n');
             end
             else if opsiB = 2 then //opsi 2.2 menghapus barang terakhir
             begin
                 clrscr;
-                writeln('==============================================');
-                writeln('==== |||||     |||||      |||||     ||||| ====');
-                writeln('====  |||     |||        |||       |||    ====');
-                writeln('====  |||      |||        |||      |||    ====');
-                writeln('====  |||       |||        |||     |||    ====');
-                writeln('====  |||        |||        |||    |||    ====');
-                writeln('==== |||||    |||||      |||||      ||||| ====');
-                writeln('==============================================');
-                writeln('======    S    Y    S    T    E    M    ======');
-                writeln('==============================================');
-                writeln('=== Inventory Smart Stock & Control System ===');
-                writeln('==============================================');
+                for h:=0 to 11 do 
+                begin
+                    writeln(header[h]);
+                end;
                 writeln;
                 SetLength(namaBarang, length(namaBarang)-1);
                 SetLength(jumlahBarang, length(jumlahBarang)-1);
@@ -161,18 +128,10 @@ begin
             else
             begin
                 clrscr;
-                writeln('==============================================');
-                writeln('==== |||||     |||||      |||||     ||||| ====');
-                writeln('====  |||     |||        |||       |||    ====');
-                writeln('====  |||      |||        |||      |||    ====');
-                writeln('====  |||       |||        |||     |||    ====');
-                writeln('====  |||        |||        |||    |||    ====');
-                writeln('==== |||||    |||||      |||||      ||||| ====');
-                writeln('==============================================');
-                writeln('======    S    Y    S    T    E    M    ======');
-                writeln('==============================================');
-                writeln('=== Inventory Smart Stock & Control System ===');
-                writeln('==============================================');
+                for h:=0 to 11 do 
+                begin
+                    writeln(header[h]);
+                end;
                 writeln;
                 writeln('OPSI TIDAK VALID!');
             end;
@@ -183,43 +142,27 @@ begin
                 if length(namaBarang) = 0 then
                 begin
                     clrscr;
-                    writeln('==============================================');
-                    writeln('==== |||||     |||||      |||||     ||||| ====');
-                    writeln('====  |||     |||        |||       |||    ====');
-                    writeln('====  |||      |||        |||      |||    ====');
-                    writeln('====  |||       |||        |||     |||    ====');
-                    writeln('====  |||        |||        |||    |||    ====');
-                    writeln('==== |||||    |||||      |||||      ||||| ====');
-                    writeln('==============================================');
-                    writeln('======    S    Y    S    T    E    M    ======');
-                    writeln('==============================================');
-                    writeln('=== Inventory Smart Stock & Control System ===');
-                    writeln('==============================================');
+                    for h:=0 to 11 do 
+                    begin
+                        writeln(header[h]);
+                    end;
                     writeln;
                     writeln('Barang belum ada! Silahkan perbarui stok barang!');
                 end
                 else
                 begin
                     clrscr;
-                    writeln('==============================================');
-                    writeln('==== |||||     |||||      |||||     ||||| ====');
-                    writeln('====  |||     |||        |||       |||    ====');
-                    writeln('====  |||      |||        |||      |||    ====');
-                    writeln('====  |||       |||        |||     |||    ====');
-                    writeln('====  |||        |||        |||    |||    ====');
-                    writeln('==== |||||    |||||      |||||      ||||| ====');
-                    writeln('==============================================');
-                    writeln('======    S    Y    S    T    E    M    ======');
-                    writeln('==============================================');
-                    writeln('=== Inventory Smart Stock & Control System ===');
-                    writeln('==============================================');
+                    for h:=0 to 11 do 
+                    begin
+                        writeln(header[h]);
+                    end;
                     writeln;
                     writeln('==============================================');
                     writeln('= No. | Nama Barang            | jumlah Stok =');
                     writeln('=--------------------------------------------=');
-                    for i:=1 to high(namaBarang) do
+                    for i:=0 to high(namaBarang) do
                     begin
-                        write('= ', i, '.');
+                        write('= ', i+1, '.');
                         write('  | ', namaBarang[i]);
                         for j:=1 to (22-length(namaBarang[i])) do 
                         begin
@@ -236,23 +179,15 @@ begin
                     if opsiB = 1 then // fitur 3.1 tambah stok barang
                     begin
                         clrscr;
-                        writeln('==============================================');
-                        writeln('==== |||||     |||||      |||||     ||||| ====');
-                        writeln('====  |||     |||        |||       |||    ====');
-                        writeln('====  |||      |||        |||      |||    ====');
-                        writeln('====  |||       |||        |||     |||    ====');
-                        writeln('====  |||        |||        |||    |||    ====');
-                        writeln('==== |||||    |||||      |||||      ||||| ====');
-                        writeln('==============================================');
-                        writeln('======    S    Y    S    T    E    M    ======');
-                        writeln('==============================================');
-                        writeln('=== Inventory Smart Stock & Control System ===');
-                        writeln('==============================================');
+                        for h:=0 to 11 do 
+                        begin
+                            writeln(header[h]);
+                        end;
                         writeln;
                         writeln('==============================================');
                         writeln('= No. | Nama Barang            | jumlah Stok =');
                         writeln('=--------------------------------------------=');
-                        for i:=1 to high(namaBarang) do
+                        for i:=0 to high(namaBarang) do
                         begin
                             write('= ', i, '.');
                             write('  | ', namaBarang[i]);
@@ -274,25 +209,17 @@ begin
                     else if opsiB = 2 then // fitur 3.2 kurangi stok barang
                     begin
                         clrscr;
-                        writeln('==============================================');
-                        writeln('==== |||||     |||||      |||||     ||||| ====');
-                        writeln('====  |||     |||        |||       |||    ====');
-                        writeln('====  |||      |||        |||      |||    ====');
-                        writeln('====  |||       |||        |||     |||    ====');
-                        writeln('====  |||        |||        |||    |||    ====');
-                        writeln('==== |||||    |||||      |||||      ||||| ====');
-                        writeln('==============================================');
-                        writeln('======    S    Y    S    T    E    M    ======');
-                        writeln('==============================================');
-                        writeln('=== Inventory Smart Stock & Control System ===');
-                        writeln('==============================================');
+                        for h:=0 to 11 do 
+                        begin
+                            writeln(header[h]);
+                        end;
                         writeln;
                         writeln('==============================================');
                         writeln('= No. | Nama Barang            | jumlah Stok =');
                         writeln('=--------------------------------------------=');
-                        for i:=1 to high(namaBarang) do
+                        for i:=0 to high(namaBarang) do
                         begin
-                            write('= ', i, '.');
+                            write('= ', i+1, '.');
                             write('  | ', namaBarang[i]);
                             for j:=1 to (22-length(namaBarang[i])) do 
                             begin
@@ -312,18 +239,10 @@ begin
                     else
                     begin
                         clrscr;
-                        writeln('==============================================');
-                        writeln('==== |||||     |||||      |||||     ||||| ====');
-                        writeln('====  |||     |||        |||       |||    ====');
-                        writeln('====  |||      |||        |||      |||    ====');
-                        writeln('====  |||       |||        |||     |||    ====');
-                        writeln('====  |||        |||        |||    |||    ====');
-                        writeln('==== |||||    |||||      |||||      ||||| ====');
-                        writeln('==============================================');
-                        writeln('======    S    Y    S    T    E    M    ======');
-                        writeln('==============================================');
-                        writeln('=== Inventory Smart Stock & Control System ===');
-                        writeln('==============================================');
+                        for h:=0 to 11 do
+                        begin
+                            writeln(header[h]);
+                        end;
                         writeln;
                         writeln('OPSI TIDAK VALID!');
                     end;
@@ -331,7 +250,7 @@ begin
             writeln;
             write('Apakah ingin melanjutkan manage stok barang (y/n) : ');
             readln(opsiX);
-            lowercase(opsiX);
+            opsiX:=lowercase(opsiX);
             until(opsiX='n');
         end
         else if opsiA = 0 then
@@ -341,39 +260,23 @@ begin
         else
         begin
             clrscr;
-            writeln('==============================================');
-            writeln('==== |||||     |||||      |||||     ||||| ====');
-            writeln('====  |||     |||        |||       |||    ====');
-            writeln('====  |||      |||        |||      |||    ====');
-            writeln('====  |||       |||        |||     |||    ====');
-            writeln('====  |||        |||        |||    |||    ====');
-            writeln('==== |||||    |||||      |||||      ||||| ====');
-            writeln('==============================================');
-            writeln('======    S    Y    S    T    E    M    ======');
-            writeln('==============================================');
-            writeln('=== Inventory Smart Stock & Control System ===');
-            writeln('==============================================');
+            for h:=0 to 11 do
+            begin
+                writeln(header[h]);
+            end;
             writeln;
             writeln('OPSI TIDAK VALID!');
         end;
     writeln;
     write('Apakah ingin melanjutkan aktivitas (y/n) : ');
     readln(opsiX);
-    lowercase(opsiX);
+    opsiX:=lowercase(opsiX);
     until(opsiX='n');
     clrscr;
-    writeln('==============================================');
-    writeln('==== |||||     |||||      |||||     ||||| ====');
-    writeln('====  |||     |||        |||       |||    ====');
-    writeln('====  |||      |||        |||      |||    ====');
-    writeln('====  |||       |||        |||     |||    ====');
-    writeln('====  |||        |||        |||    |||    ====');
-    writeln('==== |||||    |||||      |||||      ||||| ====');
-    writeln('==============================================');
-    writeln('======    S    Y    S    T    E    M    ======');
-    writeln('==============================================');
-    writeln('=== Inventory Smart Stock & Control System ===');
-    writeln('==============================================');
+    for h:=0 to 11 do 
+    begin
+        writeln(header[h]);
+    end;
     writeln;
     writeln('==============================================');
     writeln('===   S  A  M  P  A  I     J  U  M  P  A   ===');
