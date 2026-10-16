@@ -1,11 +1,6 @@
-# Abaikan file executable dan file temporary compiler Free Pascal
 *.exe
 *.o
-*.ppu
-*.bak
 *~
 *.dir
 
-# Abaikan folder cache/backup bawaan IDE (jika pakai Lazarus/Free Pascal)
-backup/
-lib/ 
+ISSC_System
