@@ -1,9 +1,15 @@
 <div align="center">
 
-# 📦 ISSC System : Inventory Smart Stock & Control System
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=ISSC%20System&fontSize=60&animation=fadeIn&fontAlignY=38" width="100%"/>
+
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00C853&center=true&vCenter=true&width=650&lines=Inventory+Smart+Stock+%26+Control+System;Cek+stok+ketersediaan+barang;Menambah+atau+mengurangi+stok;Menambah+atau+mengurangi+barang" alt="Typing SVG" />
+</a>
+
+<br>
 
 ![Language](https://img.shields.io/badge/bahasa-Pascal-blue?style=for-the-badge)
-![Platform](https://img.shields.io/badge/platform-Console-black?style=for-the-badge)
+![Platform](https://img.shields.io/badge/tampilan-Command--Line-black?style=for-the-badge)
 
 </div>
 
@@ -38,6 +44,8 @@ ISSC System adalah aplikasi berbasis konsol (command-line) yang dikembanghkan me
 
 <div align="center">
 
-Dibuat dengan ❤️ oleh **Pembaik 3 AM**
+Dibuat oleh **Pembaik 3 AM**
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer" width="100%"/>
 
 </div>
