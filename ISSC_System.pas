@@ -60,7 +60,7 @@ begin
         readln(opsiA);
         if opsiA = 1 then //fitur 1. Cek Stok barang
         begin
-            if length(namaBarang) = 0 then
+            if length(namaBarang) = 1 then
             begin
                 clrscr;
                 for h:=0 to 11 do 
@@ -168,7 +168,7 @@ begin
         else if opsiA = 3 then //fitur 3. manage stok barang
         begin
             repeat
-                if length(namaBarang) = 0 then
+                if length(namaBarang) = 1 then
                 begin
                     clrscr;
                     for h:=0 to 11 do 
