@@ -41,7 +41,7 @@ ISSC System adalah aplikasi berbasis konsol (command-line) yang dikembanghkan me
 > Mengelola daftar inventaris secara keseluruhan dengan menambahkan jenis barang baru ke dalam sistem atau menghapus item barang yang sudah tidak lagi dicatat atau digunakan.
 
 ---
-
+ 
 <div align="center">
 
 Dibuat oleh **Pembaik 3 AM**
