@@ -18,18 +18,13 @@ begin
     setlength(header, 12); //set panjang array header
 
     TextColor(White);
-    writeln('===============================================');
-    write('                 LOADING');
+    write('LOADING');
     for l:= 1 to 5 do //perulangan titik loading
     begin
         write('.');
         delay(500); //delay 500ms sebelum melakukan cek komdisi perulangan kembali
     end;
-    writeln;
-    writeln('===============================================');
 
-
-    clrscr;
     //deklarasi isi array 0..11 header
     header[0]:='==============================================';
     header[1]:='==== |||||     |||||      |||||     ||||| ====';
