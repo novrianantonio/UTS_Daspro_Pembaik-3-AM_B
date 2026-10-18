@@ -30,7 +30,7 @@ begin
 
 
     clrscr;
-    //deklarasi isi array 0..12 header
+    //deklarasi isi array 0..11 header
     header[0]:='==============================================';
     header[1]:='==== |||||     |||||      |||||     ||||| ====';
     header[2]:='====  |||     |||        |||       |||    ====';
